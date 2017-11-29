@@ -1,5 +1,12 @@
 <% include ../partials/header %>
 
-<!-- insert code here -->
+<h2>New User</h2>
+<pre><%= warning %></pre>
+<form method='post' action='/sign-up'>
+  <input type='text' name='name' placeholder='name' required/><br />
+  <input type='email' name='email' placeholder='email' required/><br />
+  <input type='password' name='password' placeholder='password' required/><br />
+  <input type='submit' />
+</form>
 
 <% include ../partials/footer %>
