@@ -3,3 +3,11 @@ html, body {
   padding: 0;
   width: 100vw;
 }
+
+form input {
+  font-size:25px;
+}
+
+pre {
+  color: red;
+}
