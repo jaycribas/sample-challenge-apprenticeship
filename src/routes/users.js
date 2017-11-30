@@ -1,5 +1,5 @@
 import express from 'express'
-import updateUser from '../actions'
+import {updateUser} from '../actions'
 
 const router = express.Router()
 
@@ -8,7 +8,7 @@ router.route('/:id')
     res.render('users/profile')
   })
   .put((req, res) => {
-    updateUser(user)
+    updateUser(req.body)
   })
 
 router.get('/:id/edit', (req, res) => {
