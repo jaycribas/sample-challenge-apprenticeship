@@ -1,12 +1,14 @@
 <% include ../partials/header %>
 
-<h2>New User</h2>
-<pre><%= warning %></pre>
-<form method='post' action='/sign-up'>
-  <input type='text' name='name' placeholder='name' required/><br />
-  <input type='email' name='email' placeholder='email' required/><br />
-  <input type='password' name='password' placeholder='password' required/><br />
-  <input type='submit' />
-</form>
+<div class='form'>
+  <h2>New User</h2>
+  <pre><%= warning %></pre>
+  <form method='post' action='/sign-up'>
+    <input type='text' name='name' placeholder='name' required/>
+    <input type='email' name='email' placeholder='email' required/>
+    <input type='password' name='password' placeholder='password' required/>
+    <input type='submit' />
+  </form>
+</div>
 
 <% include ../partials/footer %>
