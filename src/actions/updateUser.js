@@ -12,4 +12,8 @@ export default function updateUser(user) {
     RETURNING
       *
   `, user)
+  .catch((error) => {
+    console.log('Error running updateUser', error.message, arguments)
+    throw error
+  })
 }

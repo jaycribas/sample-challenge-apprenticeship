@@ -13,7 +13,7 @@ router.route('/:id')
 
 router.get('/:id/edit', (req, res) => {
   const user = {id: 1, name: 'Bob', email: 'bob@bob.com'}
-  res.render('users/edit', { user })
+  res.render('users/edit', {user})
 })
 
 export default router

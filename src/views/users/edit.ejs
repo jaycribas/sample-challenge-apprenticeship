@@ -1,7 +1,7 @@
 <% include ../partials/header %>
 
 <div class='form'>
-  <form method='put' action='/users/<%= user.id %>'>
+  <form method='put' id='userForm' action='/users/<%= user.id %>'>
     <input type='hidden' name='id' value='<%= user.id %>' />
     <input type='text' name='name' value='<%= user.name %>' required/>
     <input type='email' name='email' value='<%= user.email %>' required/>
