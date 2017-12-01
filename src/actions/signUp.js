@@ -7,11 +7,11 @@ export default function signUp(user) {
       user.password = hash
       return db.one(`
         INSERT INTO
-        users (name, email, password)
+          users (name, email, password)
         VALUES
-        ($/name/, $/email/, $/password/)
+          ($/name/, $/email/, $/password/)
         RETURNING
-        *
+          *
         `, user)
     })
 }
