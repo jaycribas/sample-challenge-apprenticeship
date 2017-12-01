@@ -12,8 +12,9 @@ export default function signIn(user) {
   `, user)
     .then((dbUser) => {
       return middlewares.comparePassword(user.password, dbUser.password)
-        .then((compareResult) => {
-          if (!compareResult) throw Error
+        .then((match) => {
+          if (!match) throw Error
+          return dbUser
         })
     })
 }

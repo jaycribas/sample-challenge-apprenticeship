@@ -12,7 +12,9 @@ router.get('/sign-up', (req, res) => {
 
 router.post('/sign-up', (req, res) => {
   signUp(req.body)
-    .then(() => {
+    .then((user) => {
+      req.session.user = user
+      delete req.session.user.password
       res.redirect('/')
     })
     .catch(() => {
@@ -31,8 +33,10 @@ router.get('/sign-in', (req, res) => {
 })
 
 router.post('/sign-in', (req, res) => {
-  signIn(req.body)
-    .then(() => {
+  return signIn(req.body)
+    .then((user) => {
+      req.session.user = user
+      delete req.session.user.password
       res.redirect('/')
     })
     .catch(() => {
