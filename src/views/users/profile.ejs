@@ -1,8 +1,11 @@
 <% include ../partials/header %>
 
 <div class='form'>
-  <h3>name!</h3>
-  <h3>email!</h3>
+  <h3><%= user.name %></h3>
+  <h3><%= user.email %></h3>
+  <form action='/users/<%= user.id %>/edit'>
+      <input type='submit' value='Edit Profile' />
+  </form>
 </div>
 
 <% include ../partials/footer %>
